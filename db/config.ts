@@ -1,6 +1,17 @@
-import { Database } from 'limbo-wasm';
+import { defineDb, defineTable, column } from "astro:db";
 
-const db = new Database('sqlite.db');
-const stmt = db.prepare('SELECT * FROM users');
-const users = stmt.all();
-console.log(users);
+const Dates = defineTable({
+  columns: {
+    eventName: column.text(),
+    eventType: column.text(),
+    eventDate: column.date(),
+    timeStart: column.text(),
+    timeEnd: column.text(),
+    description: column.text(),
+    address: column.text(),
+  },
+});
+
+export default defineDb({
+  tables: { Dates },
+});

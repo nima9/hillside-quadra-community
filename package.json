@@ -6,14 +6,17 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format:check": "prettier --check .",
+    "format::write": "prettier --write ."
   },
   "dependencies": {
+    "@astrojs/db": "^0.14.5",
     "@astrojs/svelte": "^7.0.3",
     "@astrojs/tailwind": "^5.1.4",
     "@tailwindcss/vite": "^4.0.0-beta.9",
     "astro": "^5.1.3",
-    "limbo-wasm": "^0.0.11",
+    "prettier-plugin-astro": "^0.14.1",
     "svelte": "^5.17.1",
     "tailwindcss": "^4.0.0-beta.9",
     "typescript": "^5.7.3"
