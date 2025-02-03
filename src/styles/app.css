@@ -1,5 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Monda:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/*
+Heading font: DM Serif Display
+Quote font: EB Garamond Italic
+Body font: EB Garamond 
+*/
+
+@import url("@fontsource/dm-serif-display/400-italic.css");
+
+/* Supports weights 400-800*/
+@import url("@fontsource-variable/eb-garamond/wght-italic.css");
+
 @import "tailwindcss";
 @theme {
   /* --font-display: "Space Mono", "monospace"; */
