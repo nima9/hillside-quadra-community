@@ -1,6 +1,6 @@
 <script lang="ts">
   import '../app.css';
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   let { children } = $props();
 
   let isMenuOpen = $state(false);
@@ -9,8 +9,8 @@
     isMenuOpen = !isMenuOpen;
   }
 
-  // Get the current path from the page store using runes
-  let currentPath = $derived($page.url.pathname);
+  // Get the current path using the newer approach
+  let currentPath = $derived(page.url.pathname);
 </script>
 
 <div class="min-h-screen bg-indigo-200 text-slate-800">
@@ -33,7 +33,7 @@
             About
             {#if currentPath === '/about'}
               <span
-                class="absolute bottom-0 left-0 h-0.5 w-full bg-indigo-500 transition-all duration-300 ease-in-out"
+                class="absolute bottom-0 left-0 h-0.5 w-10 bg-indigo-500 transition-all duration-300 ease-in-out"
               ></span>
             {/if}
           </a>
@@ -46,7 +46,7 @@
             Events
             {#if currentPath === '/events'}
               <span
-                class="absolute bottom-0 left-0 h-0.5 w-full bg-indigo-500 transition-all duration-300 ease-in-out"
+                class="absolute bottom-0 left-0 h-0.5 w-10 bg-indigo-500 transition-all duration-300 ease-in-out"
               ></span>
             {/if}
           </a>
@@ -59,7 +59,7 @@
             Contact
             {#if currentPath === '/contact'}
               <span
-                class="absolute bottom-0 left-0 h-0.5 w-full bg-indigo-500 transition-all duration-300 ease-in-out"
+                class="absolute bottom-0 left-0 h-0.5 w-10 bg-indigo-500 transition-all duration-300 ease-in-out"
               ></span>
             {/if}
           </a>
@@ -114,7 +114,7 @@
             Events
             {#if currentPath === '/events'}
               <span
-                class="absolute bottom-0 left-0 h-0.5 w-full bg-indigo-500 transition-all duration-300 ease-in-out"
+                class="absolute bottom-0 left-0 h-0.5 w-12 bg-indigo-500 transition-all duration-300 ease-in-out"
               ></span>
             {/if}
           </a>
@@ -128,7 +128,7 @@
             Contact
             {#if currentPath === '/contact'}
               <span
-                class="absolute bottom-0 left-0 h-0.5 w-full bg-indigo-500 transition-all duration-300 ease-in-out"
+                class="absolute bottom-0 left-0 h-0.5 w-15 bg-indigo-500 transition-all duration-300 ease-in-out"
               ></span>
             {/if}
           </a>
