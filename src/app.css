@@ -11,6 +11,6 @@ Body font: EB Garamond
 @import url('@fontsource-variable/eb-garamond/wght-italic.css');
 
 @theme {
-	--font-title: 'DM Serif Display', serif;
-	--font-text: 'EB Garamond', serif;
+  --font-title: 'DM Serif Display', serif;
+  --font-text: 'EB Garamond', serif;
 }
